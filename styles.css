@@ -271,4 +271,95 @@ input:focus, textarea:focus{ border-color: rgba(255,255,255,.35); }
   .lead{ grid-template-columns: 1fr; }
   .contacts{ grid-template-columns: 1fr; }
   .header__cta{ display:none; }
+}/* ===== Улучшенная мобильная адаптация ===== */
+@media (max-width: 920px){
+  .header__inner{
+    gap: 10px;
+  }
+
+  /* Навигация аккуратнее и по центру */
+  .nav{
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 600px){
+  /* Шапка становится в 2 строки */
+  .header__inner{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .logo{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Герой: меньше воздуха, крупнее читаемость */
+  .hero{
+    padding: 28px 0 18px;
+  }
+
+  .badge{
+    font-size: 13px;
+  }
+
+  h1{
+    font-size: 34px;
+  }
+
+  .hero__subtitle{
+    font-size: 15px;
+  }
+
+  /* Кнопки — в колонку, на всю ширину */
+  .hero__actions{
+    flex-direction: column;
+  }
+  .hero__actions .btn{
+    width: 100%;
+  }
+
+  /* Карточки и блоки: комфортные отступы */
+  .hero__card{
+    padding: 14px;
+  }
+
+  .stat{
+    padding: 10px 12px;
+  }
+
+  .contact-card__link{
+    font-size: 16px;
+  }
+
+  /* Сетка формы — в одну колонку */
+  .form{
+    grid-template-columns: 1fr;
+  }
+
+  /* Секция заявок: чуть меньше отступы */
+  .lead{
+    padding: 14px;
+  }
+
+  /* Контакты — одна колонка и меньше пустот */
+  .contacts__block{
+    padding: 14px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 380px){
+  h1{ font-size: 30px; }
+  .logo__text{ font-size: 16px; }
+  .btn{ padding: 10px 12px; }
 }
