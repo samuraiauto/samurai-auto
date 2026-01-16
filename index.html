@@ -22,10 +22,8 @@
         <a href="#contacts">Контакты</a>
       </nav>
 
-      <!-- КНОПКИ В ШАПКЕ -->
       <div class="header__cta">
         <a class="btn btn--ghost" href="tel:+79281233330">Позвонить</a>
-        <a class="btn btn--ghost" href="https://t.me/samuraiauto161" target="_blank" rel="noopener">Telegram</a>
         <a class="btn" href="#lead">Оставить заявку</a>
       </div>
     </div>
@@ -45,6 +43,21 @@
             <a class="btn" href="#lead">Рассчитать стоимость</a>
             <a class="btn btn--ghost" href="#how">Схема работы</a>
           </div>
+
+          <div class="hero__stats" role="list">
+            <div class="stat" role="listitem">
+              <div class="stat__num">01</div>
+              <div class="stat__text">Подбор авто под ваш бюджет</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num">02</div>
+              <div class="stat__text">Проверка, документы, оплата</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num">03</div>
+              <div class="stat__text">Доставка и выдача в РФ</div>
+            </div>
+          </div>
         </div>
 
         <div class="hero__card" aria-label="Быстрые контакты">
@@ -62,24 +75,109 @@
 
           <div class="divider"></div>
 
-          <!-- КНОПКА НА TELEGRAM-КАНАЛ -->
-          <a class="btn btn--ghost btn--wide"
-             href="https://t.me/samuraiauto161"
-             target="_blank" rel="noopener">
-            Перейти в Telegram-канал
-          </a>
+          <p class="muted">
+            Напишите, какой автомобиль хотите: марка/модель, год, бюджет, город выдачи.
+          </p>
 
           <a class="btn btn--wide" href="#lead">Оставить заявку</a>
 
           <p class="fineprint">
-            *Заявка не отправляется автоматически — форму можно подключить к Telegram/почте позже.
+            *Заявка не отправляется автоматически — форма предназначена для интеграции (WhatsApp/Telegram/почта).
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Ниже можешь оставить свои секции services/how/lead если они были -->
-    <!-- Я добавляю только контакты с Telegram, чтобы было понятно, где вставлено -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section__title">Услуги</h2>
+        <p class="section__subtitle">Всё, что нужно для покупки авто по параллельному импорту.</p>
+
+        <div class="grid3">
+          <article class="card">
+            <h3>Подбор и поиск</h3>
+            <p>Подбираем варианты под ваши параметры и бюджет, формируем подборку и согласуем лучший.</p>
+          </article>
+          <article class="card">
+            <h3>Проверка и документы</h3>
+            <p>Проверка состояния/истории, сопровождение сделки, подготовка комплекта документов.</p>
+          </article>
+          <article class="card">
+            <h3>Доставка и выдача</h3>
+            <p>Организация логистики и выдача в РФ. Консультации по этапам и срокам на каждом шаге.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Как мы работаем</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step__num">1</div>
+            <div class="step__body">
+              <h3>Заявка</h3>
+              <p>Вы описываете авто (модель, год, бюджет, комплектация, город выдачи).</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">2</div>
+            <div class="step__body">
+              <h3>Подбор вариантов</h3>
+              <p>Показываем варианты и расчёт бюджета. Согласуем лучший.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">3</div>
+            <div class="step__body">
+              <h3>Сделка и доставка</h3>
+              <p>Оформление, оплата, логистика. Держим в курсе по этапам.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">4</div>
+            <div class="step__body">
+              <h3>Выдача</h3>
+              <p>Передача автомобиля и финальная проверка документов.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="lead" class="section">
+      <div class="container">
+        <div class="lead">
+          <div class="lead__text">
+            <h2>Оставьте заявку на подбор</h2>
+            <p class="muted">
+              Заполните форму — и мы свяжемся с вами. (Интеграцию отправки можно подключить позже.)
+            </p>
+          </div>
+
+          <form class="form" onsubmit="event.preventDefault(); alert('Спасибо! Свяжитесь с нами по телефону или добавьте интеграцию отправки формы.');">
+            <label>
+              <span>Ваше имя</span>
+              <input type="text" name="name" placeholder="Например, Дмитрий" required />
+            </label>
+
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 ___ ___-__-__" required />
+            </label>
+
+            <label class="form__full">
+              <span>Параметры авто</span>
+              <textarea name="details" rows="4" placeholder="Марка/модель, год, бюджет, город выдачи, пожелания"></textarea>
+            </label>
+
+            <button class="btn form__full" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <section id="contacts" class="section section--alt">
       <div class="container">
@@ -92,13 +190,16 @@
           </div>
 
           <div class="contacts__block">
-            <h3>Телефоны и связи</h3>
+            <h3>Телефоны</h3>
             <p>
               Евгений: <a href="tel:+79281233330">+7 (928) 123-33-30</a><br/>
-              Анна: <a href="tel:+79286001312">+7 (928) 600-13-12</a><br/>
-              Telegram-канал:
-              <a href="https://t.me/samuraiauto161" target="_blank" rel="noopener">@samuraiauto161</a>
+              Анна: <a href="tel:+79286001312">+7 (928) 600-13-12</a>
             </p>
+          </div>
+
+          <div class="contacts__block">
+            <h3>График</h3>
+            <p class="muted">Ежедневно, по договорённости</p>
           </div>
         </div>
 
