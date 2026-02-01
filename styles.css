@@ -474,8 +474,7 @@ h1 {
 }
 
 .form input,
-.form textarea,
-.form select {
+.form textarea {
   width: 100%;
   padding: 12px 14px;
   border-radius: var(--radius-md);
@@ -492,13 +491,8 @@ h1 {
   color: rgba(182, 199, 227, 0.7);
 }
 
-.form select:invalid {
-  color: rgba(182, 199, 227, 0.7);
-}
-
 .form input:focus,
-.form textarea:focus,
-.form select:focus {
+.form textarea:focus {
   border-color: rgba(59, 130, 246, 0.7);
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.18);
   background: rgba(15, 23, 42, 0.8);
