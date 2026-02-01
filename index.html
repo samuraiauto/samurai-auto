@@ -1,9 +1,17 @@
-<header class="header">
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samurai Auto — авто из-за границы (параллельный импорт)</title>
+  <meta name="description" content="Samurai Auto: подбор и доставка автомобилей из-за границы по принципу параллельного импорта. Евгений и Анна." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
     <div class="container header__inner">
       <a class="logo" href="#top" aria-label="Samurai Auto">
-  <img class="logo__img" src="logo.png" alt="Samurai Auto">
-  <span class="logo__text">Samurai Auto</span>
-</a>
         <img class="logo__img" src="logo.png" alt="Samurai Auto">
         <span class="logo__text">Samurai Auto</span>
       </a>
@@ -14,14 +22,6 @@
         <a href="#contacts">Контакты</a>
       </nav>
 
-      <div class="wa-buttons">
-  <div class="wa-buttons">
-  <a class="btn btn--ghost wa-btn"
-     href="https://wa.me/79281233330"
-     target="_blank" rel="noopener">
-    <span class="wa-icon"></span>
-    Евгений
-  </a>
       <div class="header__cta">
         <div class="wa-buttons">
           <a class="btn btn--ghost wa-btn"
@@ -39,23 +39,7 @@
           </a>
         </div>
 
-  <a class="btn btn--ghost wa-btn"
-     href="https://wa.me/79286001312"
-     target="_blank" rel="noopener">
-    <span class="wa-icon"></span>
-    Анна
-  </a>
-</div>
-</div>
         <a class="btn btn--ghost btn-icon" href="tel:+79281233330">
-  <span class="icon-phone" aria-hidden="true"></span>
-  Позвонить
-</a>
-
-<a class="btn btn--ghost btn-icon" href="https://t.me/samuraiauto161" target="_blank" rel="noopener">
-  <span class="icon-telegram" aria-hidden="true"></span>
-  Телеграм-канал
-</a>
           <span class="icon-phone" aria-hidden="true"></span>
           Позвонить
         </a>
@@ -68,65 +52,223 @@
         <a class="btn" href="#lead">Оставить заявку</a>
       </div>
     </div>
-@@ -93,7 +94,7 @@ <h2 class="hero__card-title">Связаться быстро</h2>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="badge">Параллельный импорт • Авто из-за границы</p>
+          <h1>Samurai Auto</h1>
+          <p class="hero__subtitle">
+            Подбор, покупка и доставка автомобилей из-за границы. Прозрачные этапы, понятный договор и сопровождение до выдачи.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#lead">Рассчитать стоимость</a>
+            <a class="btn btn--ghost" href="#how">Схема работы</a>
+          </div>
+
+          <div class="hero__stats" role="list">
+            <div class="stat" role="listitem">
+              <div class="stat__num">01</div>
+              <div class="stat__text">Подбор авто под ваш бюджет</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num">02</div>
+              <div class="stat__text">Проверка, документы, оплата</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num">03</div>
+              <div class="stat__text">Доставка и выдача в РФ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card" aria-label="Быстрые контакты">
+          <h2 class="hero__card-title">Связаться быстро</h2>
+
+          <div class="contact-card">
+            <div class="contact-card__role">Евгений</div>
+            <a class="contact-card__link" href="tel:+79281233330">+7 (928) 123-33-30</a>
           </div>
 
           <div class="contact-card">
-            <div class="contact-card__role">Анна </div>
             <div class="contact-card__role">Анна</div>
             <a class="contact-card__link" href="tel:+79286001312">+7 (928) 600-13-12</a>
           </div>
 
-@@ -185,10 +186,9 @@ <h2 class="section__title">Наши поставки</h2>
+          <div class="divider"></div>
+
+          <p class="muted">
+            Напишите, какой автомобиль хотите: марка/модель, год, бюджет, город выдачи.
+          </p>
+
+          <!-- TELEGRAM КНОПКА -->
+          <a class="btn btn--ghost btn--wide"
+             href="https://t.me/samuraiauto161"
+             target="_blank" rel="noopener">
+            Перейти в Telegram-канал
+          </a>
+
+          <a class="btn btn--wide" href="#lead">Оставить заявку</a>
+
+          <p class="fineprint">
+            *Заявка не отправляется автоматически — форма предназначена для интеграции (WhatsApp/Telegram/почта).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section__title">Услуги</h2>
+        <p class="section__subtitle">Всё, что нужно для покупки авто по параллельному импорту.</p>
+
+        <div class="grid3">
+          <article class="card">
+            <h3>Подбор и поиск</h3>
+            <p>Подбираем варианты под ваши параметры и бюджет, формируем подборку и согласуем лучший.</p>
+          </article>
+          <article class="card">
+            <h3>Проверка и документы</h3>
+            <p>Проверка состояния/истории, сопровождение сделки, подготовка комплекта документов.</p>
+          </article>
+          <article class="card">
+            <h3>Доставка и выдача</h3>
+            <p>Организация логистики и выдача в РФ. Консультации по этапам и срокам на каждом шаге.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Как мы работаем</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step__num">1</div>
+            <div class="step__body">
+              <h3>Заявка</h3>
+              <p>Вы описываете авто (модель, год, бюджет, комплектация, город выдачи).</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">2</div>
+            <div class="step__body">
+              <h3>Подбор вариантов</h3>
+              <p>Показываем варианты и расчёт бюджета. Согласуем лучший.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">3</div>
+            <div class="step__body">
+              <h3>Сделка и доставка</h3>
+              <p>Оформление, оплата, логистика. Держим в курсе по этапам.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">4</div>
+            <div class="step__body">
+              <h3>Выдача</h3>
+              <p>Передача автомобиля и финальная проверка документов.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">Наши поставки</h2>
+    <p class="section__subtitle">
+      Реальные автомобили и этапы работы Samurai Auto
     </p>
 
     <div class="gallery">
-      <img src="images/car1.jpg">
-      <img src="images/car2.jpg">
-      <img src="images/car3.jpg">
-      <img src="images/car4.jpg">
       <img src="images/car1.jpg" alt="Поставка автомобиля 1" loading="lazy">
       <img src="images/car2.jpg" alt="Поставка автомобиля 2" loading="lazy">
       <img src="images/car3.jpg" alt="Поставка автомобиля 3" loading="lazy">
     </div>
   </div>
 </section>
-@@ -203,7 +203,7 @@ <h2>Оставьте заявку на подбор</h2>
+
+    <section id="lead" class="section">
+      <div class="container">
+        <div class="lead">
+          <div class="lead__text">
+            <h2>Оставьте заявку на подбор</h2>
+            <p class="muted">
+              Заполните форму — и мы свяжемся с вами. (Интеграцию отправки можно подключить позже.)
             </p>
           </div>
 
-          <form class="form" method="POST" action="https://script.google.com/macros/s/AKfycbypbyJGkfu2JM0UDI3uxzL8orfCSjPVXOW7uekvvIJWF8S0B1ggFbzAcQcRLC2rkv3WeA/exec">"
           <form class="form" method="POST" action="https://script.google.com/macros/s/AKfycbypbyJGkfu2JM0UDI3uxzL8orfCSjPVXOW7uekvvIJWF8S0B1ggFbzAcQcRLC2rkv3WeA/exec">
             <label>
               <span>Ваше имя</span>
               <input type="text" name="name" placeholder="Например, Дмитрий" required />
-@@ -272,29 +272,3 @@ <h3>График</h3>
+            </label>
+
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 ___ ___-__-__" required />
+            </label>
+
+            <label class="form__full">
+              <span>Параметры авто</span>
+              <textarea name="details" rows="4" placeholder="Марка/модель, год, бюджет, город выдачи, пожелания"></textarea>
+            </label>
+
+            <button class="btn form__full" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Контакты</h2>
+
+        <div class="contacts">
+          <div class="contacts__block">
+            <h3>Samurai Auto</h3>
+            <p class="muted">Продажа автомобилей из-за границы по принципу параллельного импорта.</p>
+          </div>
+
+          <div class="contacts__block">
+            <h3>Телефоны</h3>
+            <p>
+  Евгений:<br>
+  <a href="tel:+79281233330">+7 (928) 123-33-30</a><br>
+  <a href="https://wa.me/79281233330" target="_blank">
+    Написать в WhatsApp
+  </a>
+</p>
+
+<p>
+  Анна:<br>
+  <a href="tel:+79286001312">+7 (928) 600-13-12</a><br>
+  <a href="https://wa.me/79286001312" target="_blank">
+    Написать в WhatsApp
+  </a>
+</p>
+          </div>
+
+          <div class="contacts__block">
+            <h3>График</h3>
+            <p class="muted">Ежедневно, по договорённости</p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p class="fineprint">© <span id="y"></span> Samurai Auto. Все права защищены.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-<form class="form"
-      method="POST"
-      action="https://script.google.com/macros/s/AKfycbzKd-hImIrpj414FPBc1FHyzptooNtZIy_nv4QbLodzbSlVXjbdCpwsKLj6BufqV1-Jgw/exec">
-
-  <label>
-    <span>Ваше имя</span>
-    <input type="text" name="name" placeholder="Например, Дмитрий" required>
-  </label>
-
-  <label>
-    <span>Телефон</span>
-    <input type="tel" name="phone" placeholder="+7 ___ ___-__-__" required>
-  </label>
-
-  <label class="form__full">
-    <span>Параметры авто</span>
-    <textarea name="details"
-              rows="4"
-              placeholder="Марка/модель, год, бюджет, город выдачи, пожелания"></textarea>
-  </label>
-
-  <button class="btn form__full" type="submit">
-    Отправить
-  </button>
-
-</form>
