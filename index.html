@@ -137,6 +137,29 @@
     </section>
 
     <section id="services" class="section">
+      <div class="car-with-smoke">
+        <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Дым -->
+          <g class="smoke-group">
+            <circle class="smoke smoke-1" cx="50" cy="50" r="6" fill="rgba(182, 199, 227, 0.4)"/>
+            <circle class="smoke smoke-2" cx="55" cy="45" r="7" fill="rgba(182, 199, 227, 0.35)"/>
+            <circle class="smoke smoke-3" cx="60" cy="38" r="8" fill="rgba(182, 199, 227, 0.3)"/>
+            <circle class="smoke smoke-4" cx="65" cy="30" r="9" fill="rgba(182, 199, 227, 0.25)"/>
+            <circle class="smoke smoke-5" cx="70" cy="22" r="10" fill="rgba(182, 199, 227, 0.2)"/>
+            <circle class="smoke smoke-6" cx="75" cy="15" r="11" fill="rgba(182, 199, 227, 0.15)"/>
+            <circle class="smoke smoke-7" cx="80" cy="8" r="12" fill="rgba(182, 199, 227, 0.1)"/>
+          </g>
+          <!-- Автомобиль -->
+          <path d="M30 70C30 65 35 60 40 60H160C165 60 170 65 170 70V80C170 85 165 90 160 90H40C35 90 30 85 30 80V70Z" fill="rgba(59, 130, 246, 0.2)" stroke="rgba(59, 130, 246, 0.5)" stroke-width="2"/>
+          <path d="M50 60L60 50H140L150 60" stroke="rgba(59, 130, 246, 0.5)" stroke-width="2" stroke-linecap="round" fill="rgba(34, 211, 238, 0.15)"/>
+          <circle cx="50" cy="90" r="10" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2"/>
+          <circle cx="50" cy="90" r="6" fill="rgba(34, 211, 238, 0.3)"/>
+          <circle cx="150" cy="90" r="10" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2"/>
+          <circle cx="150" cy="90" r="6" fill="rgba(34, 211, 238, 0.3)"/>
+          <!-- Выхлопная труба -->
+          <rect x="35" y="55" width="8" height="12" fill="rgba(34, 211, 238, 0.4)" stroke="rgba(34, 211, 238, 0.6)" stroke-width="1"/>
+        </svg>
+      </div>
       <div class="container">
         <h2 class="section__title">Услуги</h2>
         <p class="section__subtitle">Всё, что нужно для покупки авто по параллельному импорту.</p>
@@ -185,6 +208,22 @@
     </section>
 
     <section id="how" class="section section--alt">
+      <div class="scroll-wheel">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" stroke="rgba(59, 130, 246, 0.3)" stroke-width="3"/>
+          <circle cx="50" cy="50" r="35" stroke="rgba(34, 211, 238, 0.3)" stroke-width="2"/>
+          <circle cx="50" cy="50" r="25" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2"/>
+          <circle cx="50" cy="50" r="8" fill="rgba(59, 130, 246, 0.5)"/>
+          <line x1="50" y1="5" x2="50" y2="15" stroke="rgba(59, 130, 246, 0.6)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="50" y1="85" x2="50" y2="95" stroke="rgba(59, 130, 246, 0.6)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="5" y1="50" x2="15" y2="50" stroke="rgba(59, 130, 246, 0.6)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="85" y1="50" x2="95" y2="50" stroke="rgba(59, 130, 246, 0.6)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="20" y1="20" x2="28" y2="28" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="72" y1="72" x2="80" y2="80" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="80" y1="20" x2="72" y2="28" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="28" y1="72" x2="20" y2="80" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
       <div class="container">
         <h2 class="section__title">Как мы работаем</h2>
 
@@ -392,6 +431,24 @@
     document.querySelectorAll('.gallery img').forEach(img => {
       galleryObserver.observe(img);
     });
+
+    // Вращение колеса при скролле
+    const scrollWheel = document.querySelector('.scroll-wheel svg');
+    let lastScrollTop = 0;
+    let rotation = 0;
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollDelta = scrollTop - lastScrollTop;
+      
+      // Вращаем колесо в зависимости от направления скролла
+      rotation += scrollDelta * 0.5;
+      if (scrollWheel) {
+        scrollWheel.style.transform = `rotate(${rotation}deg)`;
+      }
+      
+      lastScrollTop = scrollTop;
+    }, { passive: true });
   </script>
 </body>
 </html>

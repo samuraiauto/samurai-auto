@@ -502,6 +502,130 @@ section {
   }
 }
 
+/* Колесо, вращающееся при скролле */
+.scroll-wheel {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-wheel svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.4));
+  transition: transform 0.1s linear;
+}
+
+.scroll-wheel:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 1100px) {
+  .scroll-wheel {
+    right: 20px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-wheel {
+    display: none;
+  }
+}
+
+/* Машина с дымом */
+.car-with-smoke {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  width: 200px;
+  height: 120px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(0.5px);
+}
+
+.car-with-smoke svg {
+  width: 100%;
+  height: 100%;
+}
+
+.smoke {
+  animation: smokeRise 3s ease-in-out infinite;
+  filter: blur(2px);
+}
+
+.smoke-1 {
+  animation-delay: 0s;
+}
+
+.smoke-2 {
+  animation-delay: 0.2s;
+}
+
+.smoke-3 {
+  animation-delay: 0.4s;
+}
+
+.smoke-4 {
+  animation-delay: 0.6s;
+}
+
+.smoke-5 {
+  animation-delay: 0.8s;
+}
+
+.smoke-6 {
+  animation-delay: 1s;
+}
+
+.smoke-7 {
+  animation-delay: 1.2s;
+}
+
+@keyframes smokeRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.6);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-15px) translateX(3px) scale(1);
+    opacity: 0.5;
+  }
+  60% {
+    transform: translateY(-30px) translateX(8px) scale(1.3);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-50px) translateX(15px) scale(1.8);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .car-with-smoke {
+    width: 150px;
+    height: 90px;
+    left: 2%;
+    top: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .car-with-smoke {
+    display: none;
+  }
+}
+
 .hero__grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
