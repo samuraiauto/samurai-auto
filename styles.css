@@ -698,7 +698,29 @@ section {
 
 @media (max-width: 768px) {
   .decorative-wheel {
-    display: none;
+    width: 60px;
+    height: 60px;
+    opacity: 0.4;
+  }
+  
+  .decorative-wheel--1 {
+    left: 1%;
+    top: 10%;
+  }
+  
+  .decorative-wheel--2 {
+    right: 1%;
+    top: 20%;
+  }
+  
+  .decorative-wheel--3 {
+    left: 1%;
+    top: 15%;
+  }
+  
+  .decorative-wheel--4 {
+    right: 1%;
+    top: 10%;
   }
 }
 
