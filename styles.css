@@ -523,6 +523,11 @@ section {
   transition: transform 0.1s linear;
 }
 
+.scroll-wheel svg text {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 12px rgba(34, 211, 238, 0.4));
+  pointer-events: none;
+}
+
 .scroll-wheel:hover {
   opacity: 0.9;
 }

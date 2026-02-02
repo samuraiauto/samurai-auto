@@ -210,6 +210,13 @@
     <section id="how" class="section section--alt">
       <div class="scroll-wheel">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="wheelTextGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0.9);stop-opacity:1" />
+              <stop offset="50%" style="stop-color:rgba(182, 199, 227, 0.9);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:rgba(34, 211, 238, 0.9);stop-opacity:1" />
+            </linearGradient>
+          </defs>
           <circle cx="50" cy="50" r="45" stroke="rgba(59, 130, 246, 0.3)" stroke-width="3"/>
           <circle cx="50" cy="50" r="35" stroke="rgba(34, 211, 238, 0.3)" stroke-width="2"/>
           <circle cx="50" cy="50" r="25" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2"/>
@@ -222,6 +229,10 @@
           <line x1="72" y1="72" x2="80" y2="80" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2" stroke-linecap="round"/>
           <line x1="80" y1="20" x2="72" y2="28" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2" stroke-linecap="round"/>
           <line x1="28" y1="72" x2="20" y2="80" stroke="rgba(34, 211, 238, 0.6)" stroke-width="2" stroke-linecap="round"/>
+          <text x="50" y="50" font-family="Arial, sans-serif" font-size="6" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="url(#wheelTextGradient)" letter-spacing="0.5">
+            <tspan x="50" dy="-3">SAMURAI</tspan>
+            <tspan x="50" dy="4">AUTO</tspan>
+          </text>
         </svg>
       </div>
       <div class="container">
