@@ -645,7 +645,7 @@ section {
 .decorative-wheel svg {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5)) drop-shadow(0 0 30px rgba(34, 211, 238, 0.3));
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 30px rgba(182, 199, 227, 0.4));
   transition: transform 0.1s linear;
 }
 
@@ -698,29 +698,33 @@ section {
 
 @media (max-width: 768px) {
   .decorative-wheel {
-    width: 60px;
-    height: 60px;
-    opacity: 0.4;
+    width: 70px;
+    height: 70px;
+    opacity: 0.8;
   }
   
   .decorative-wheel--1 {
-    left: 1%;
+    left: 2%;
     top: 10%;
   }
   
   .decorative-wheel--2 {
-    right: 1%;
-    top: 20%;
+    right: 2%;
+    top: 25%;
   }
   
   .decorative-wheel--3 {
-    left: 1%;
-    top: 15%;
+    left: 2%;
+    top: 50%;
   }
   
   .decorative-wheel--4 {
-    right: 1%;
-    top: 10%;
+    right: 2%;
+    top: 70%;
+  }
+  
+  .decorative-wheel svg {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 25px rgba(182, 199, 227, 0.4));
   }
 }
 
